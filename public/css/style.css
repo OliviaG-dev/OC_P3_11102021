@@ -1,3 +1,9 @@
+.located, header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 *, ::before, ::after {
   box-sizing: border-box;
   margin: 0;
@@ -44,6 +50,58 @@ body {
 
 .title {
   font-family: "Shrikhand", cursive;
+}
+
+/**************Header*****************/
+header {
+  height: 4rem;
+  width: 100%;
+  box-shadow: 0 0 0.28rem rgba(0, 0, 0, 0.425);
+  position: relative;
+  z-index: 10;
+  background: rgba(236, 234, 234, 0.938);
+}
+header .logo {
+  font-size: 2.2em;
+}
+
+/*************Located****************/
+.located {
+  height: 3.5rem;
+  background: #e0dede;
+}
+.located__text {
+  font-size: 1.1em;
+  font-weight: 500;
+  padding-left: 1rem;
+}
+
+/**************Information************/
+.infobox {
+  padding: 2rem 1.5rem 3rem 1.5rem;
+  text-align: center;
+  background: rgba(236, 234, 234, 0.938);
+  width: 100%;
+}
+.infobox h2 {
+  font-size: 1.5em;
+  padding: 1rem 3rem;
+  font-weight: 700;
+}
+.infobox p {
+  font-size: 1.1em;
+  padding-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+/***************Manual***************/
+.manual {
+  width: 100%;
+}
+.manual__title {
+  font-size: 1.5em;
+  padding: 3rem 1.2rem;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
