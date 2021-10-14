@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7cc1ff1b73.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="./public/css/style.css">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
             <div class="infobox">
                 <h2>Réservez le menu qui vous convient</h2>
                 <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                <button class="">Explorer nos restaurants</button>
+                <button class="button">Explorer nos restaurants</button>
             </div>
         </section>
 <!---------------------------- Section 2 ------------------------------------------------->
@@ -37,28 +37,105 @@
             <div class="manual__box">
                 <div class="manual__item">
                     <span class="manual__circle">1</span>
-                    <i class="fas fa-mobile-alt"></i>
+                    <i class="fas fa-mobile-alt manual__icone"></i>
                     <h3 class="manual__text">Choisissez un restaurant</h3>
                 </div>
                 <div class="manual__item">
                     <span class="manual__circle">2</span>
-                    <i class="fas fa-list-ul"></i>
+                    <i class="fas fa-list-ul manual__icone"></i>
                     <h3 class="manual__text">Composez votre menu</h3>
                 </div>
-                <div class="manual__item">
+                <div class="manual__item--active">
                     <span class="manual__circle">3</span>
-                    <i class="fas fa-store"></i>
+                    <i class="fas fa-store manual__icone--active"></i>
                     <h3 class="manual__text">Déguster au restaurant</h3>
                 </div>
             </div>
         </section>
-
-
-
-        <section></section>
+<!---------------------------- Section 3 ------------------------------------------------->
+        <section class="food">
+            <h2 class="food__title">Restaurants</h2>
+            <div class="restaurants">
+                <a href="#" class="restaurants__item">
+                    <img src="./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="un plat dans un restaurant" class="restaurants__item__picture">
+                        <span class="restaurants__item__picture--news">Nouveau</span>
+                    </img>
+                <div class="item__boxtext">
+                    <div>
+                        <h3 class="item__boxtext__name">La palette du goût</h3>
+                        <p class="item__boxtext__location">Ménilmontant</p>
+                    </div>   
+                    <div class="item__boxtext__heart">
+                        <i class="far fa-heart heart__vide"></i>
+                        <i class="fas fa-heart heart__full"></i>
+                    </div>
+                </div>
+                    
+                    
+                </a>
+                <a href="#" class="restaurants__item">
+                    <img src="./public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="un plat dans un restaurant" class="restaurants__item__picture">
+                        <span class="restaurants__item__picture--news">Nouveau</span>
+                    </img>
+                    <div class="item__boxtext">
+                        <div>
+                            <h3 class="item__boxtext__name">La note enchantée</h3>
+                            <p class="item__boxtext__location">Charonne</p>
+                        </div>
+                        <div class="item__boxtext__heart">
+                            <i class="far fa-heart heart__vide"></i>
+                            <i class="fas fa-heart heart__full"></i>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="restaurants__item">
+                    <img src="./public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="un plat dans un restaurant" class="restaurants__item__picture"></img>
+                    <div class="item__boxtext">
+                        <div>
+                            <h3 class="item__boxtext__name">À la française</h3>
+                            <p class="item__boxtext__location">Cité Rouge</p>
+                        </div>
+                        <div class="item__boxtext__heart">
+                            <i class="far fa-heart heart__vide"></i>
+                            <i class="fas fa-heart heart__full"></i>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="restaurants__item">
+                    <img src="./public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="un plat dans un restaurant" class="restaurants__item__picture"><img>
+                    <div class="item__boxtext">
+                        <div>
+                            <h3 class="item__boxtext__name">Le délice des sens</h3>
+                            <p class="item__boxtext__location">Folie-Méricourt</p>
+                        </div>
+                        <div class="item__boxtext__heart">
+                            <i class="far fa-heart heart__vide"></i>
+                            <i class="fas fa-heart heart__full"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
     </main>
-    <footer>
 
+<!---------------------------- Footer ------------------------------------------------->
+
+    <footer>
+    <h2 class="logo__footer">Ohmyfood</h2>
+    <ul class="footer__list">
+        <li>
+            <a href="#"><i class="fas fa-utensils footer__list__icone"></i>Proposer un restaurant<i></a>
+        </li>
+        <li>
+            <a href="#"><i class="fas fa-hands-helping footer__list__icone"></i>Devenir partenaire<i></a>
+        </li>
+        <li>
+            <a href="#">Mentions légales</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+    </ul>
     </footer>
 </body>
 </html>
