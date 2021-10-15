@@ -15,7 +15,8 @@ header {
     box-shadow: 0 0 0.28rem rgba(0, 0, 0, 0.425);
     position: relative;
     z-index: 10;
-    background: rgba(236, 234, 234, 0.938);;
+    background: $color-background-one;
+    position: relative;
 
     .logo {
         font-size: 2.2em;
@@ -26,7 +27,7 @@ header {
 
 .located {
     height: 3.5rem;
-    background: #e0dede;
+    background: $color-background-two;
     @extend %flexcenter;
 
         &__text {
@@ -41,7 +42,8 @@ header {
 .infobox {
     padding: 2rem 1.5rem 3rem 1.5rem;
     text-align: center;
-    background: rgba(236, 234, 234, 0.938);
+    background: $color-background-one;
+    ;
     width: 100%;
 
 
@@ -79,7 +81,7 @@ header {
         .manual__item {
             height: 4.3rem;
             width: 85%;
-            background: rgba(236, 234, 234, 0.938);
+            background: $color-background-one;
             margin: 1rem;
             display: flex;
             align-items: center;
@@ -108,7 +110,7 @@ header {
         .manual__icone {
             padding-left: 1.8rem;
             padding-right: 2rem;
-            color: #6b6969;
+            color: #7E7E7E;
 
                 &--active {
                     @extend .manual__icone;
@@ -126,7 +128,7 @@ header {
 /******************************Section 3*********************************/
 .food{
     margin-top: 3rem;
-    background: #dbd7d7;
+    background: $color-background-one ;
     padding-bottom: 5rem;
 
         &__title{
@@ -183,8 +185,8 @@ header {
         align-items: center;
 
         &__name{
-            font-weight: 500;
-            font-size: 1em;
+            font-weight: 700;
+            font-size: 1.1em;
             line-height: 1.8rem;
         }
     }
@@ -221,7 +223,7 @@ header {
 
 Footer {
     padding: 1rem 1.5rem;
-    background: #3a3838;
+    background: #353535;
     color: white;
 
     .logo__footer{
@@ -256,5 +258,142 @@ Footer {
         &:hover{
             background: linear-gradient(170deg, rgba(255, 121, 217, 0.550) 0%, rgba(147,86,220,0.550) 100%);
             box-shadow: 2px 5px 17px -2px #807e7e;
+        }
+}
+
+/*************************Page restaurant**************************************/
+/******************************************************************************/
+.pagemenu{
+    background: $color-background-one;
+}
+
+/**************************Header resto****************************************/
+
+.header__arrow{
+        position: absolute;
+        top: 1.4rem;
+        left: 1.5rem;
+        font-size: 1.5em;
+}
+
+/************************Picture Section1************************************/
+
+.picture {
+    width: 100%;
+    position: relative;
+    z-index: 0; 
+        &__img{
+            object-fit: cover;
+            width: 100%;
+            height: 20rem;
+            z-index: 0;
+            position: relative; 
+        }
+}
+
+/*******************Section2***************************************/
+/*****************Title *******************************************/
+
+.menu__title{
+    background: $color-background-one;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+    border-radius: 2rem 2rem 0 0;
+    position: relative;
+    top: -4.5rem;
+    z-index: 10;
+    // background-color: #ffffff;
+        &__logo{
+            font-size: 1.9em;
+            font-weight: 500;
+        }
+    
+        .item__boxtext__heart {
+            font-size: 1.4em;
+            position: relative;
+            display: flex;
+            align-items: center;
+    
+        .heart__vide:hover{ 
+            display: none;
+            position: relative;
+            opacity: 0;
+            z-index: 1;
+        
+        }
+        
+        .heart__full{
+            opacity: 0; 
+            position: absolute;
+            top: 24%;
+            left: 0%;
+            color: $colour-primary;
+            z-index: 2;
+            
+    
+            :hover{
+                z-index: 12;
+                display: block;
+                opacity: 1;
+                }
+            }
+        }
+}
+
+/*****************Plats *******************************************/
+
+.list{
+    padding: 0 1rem 0 1rem;
+    margin-bottom: 2rem;
+        &__title{
+            font-weight: 300;
+                &::after{
+                    content: "";
+                    height: 0.18rem;
+                    width: 2.3rem;
+                    background: $colour-tertiary;
+                    display: block;
+                    margin-top: 0.3rem;
+                }
+        }
+        &__title--first {
+            margin-top: -3rem;
+            &::after{
+                content: "";
+                height: 0.18rem;
+                width: 2.3rem;
+                background: $colour-tertiary;
+                display: block;
+                margin-top: 0.3rem;
+            }
+        }
+
+.list__menu{
+    background: #ffffff;
+    margin-top: 1rem;
+    padding: 0.7rem;
+    border-radius: 1rem;
+    box-shadow: 2px 5px 0.9rem -2px #0000001f;
+        &__title{
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+        &__subtitle{
+            display:flex;
+            justify-content: space-between;
+        }
+}
+}
+
+/*******************Button Menu****************/
+.button__menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 8rem;
+    padding-top: 1rem;
+        .button{
+            width: 10rem;
         }
 }
