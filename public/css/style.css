@@ -1,9 +1,11 @@
+/*Outils*/
 .restaurants__item .restaurants__item__picture--news, .manual__box .manual__item .manual__circle, .manual__box .manual__item--active .manual__circle, .manual__box, .located, header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/*Base*/
 *, ::before, ::after {
   box-sizing: border-box;
   margin: 0;
@@ -48,7 +50,41 @@ body {
   font-family: "Shrikhand", cursive;
 }
 
-/**************Header*****************/
+/*********animation loader***************/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes Loader {
+  100% {
+    opacity: 0;
+    z-index: -99;
+  }
+}
+/***********animation coeur******************/
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/**********animation menu***************/
+@keyframes translateY {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+/*Layout*/
+/**************Header accueil*****************/
 header {
   height: 4rem;
   width: 100%;
@@ -62,6 +98,123 @@ header .logo {
   font-size: 2.2em;
 }
 
+/***************Header resto************/
+.header__arrow {
+  position: absolute;
+  top: 1.4rem;
+  left: 1.5rem;
+  font-size: 1.5em;
+}
+
+Footer {
+  padding: 1.5rem 1.5rem;
+  background: #353535;
+  color: white;
+}
+@media (min-width: 1500px) {
+  Footer {
+    display: flex-inline;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+  }
+}
+Footer .logo__footer {
+  padding-bottom: 1rem;
+}
+Footer .footer__list {
+  list-style: none;
+  line-height: 1.7;
+  font-size: 0.9em;
+}
+Footer .footer__list__icone {
+  margin-right: 0.5rem;
+}
+
+/*components*/
+/*button home */
+.button {
+  height: 3rem;
+  width: 14rem;
+  border-radius: 2rem;
+  background: linear-gradient(170deg, #ff79da 0%, #9356dc 100%);
+  border: none;
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+  box-shadow: 2px 5px 7px -2px #807e7e;
+  cursor: pointer;
+}
+.button:hover {
+  background: linear-gradient(170deg, rgba(255, 121, 217, 0.55) 0%, rgba(147, 86, 220, 0.55) 100%);
+  box-shadow: 2px 5px 17px -2px #807e7e;
+}
+
+/*button menu*/
+.button__menu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 8rem;
+  padding-top: 1rem;
+}
+.button__menu .button {
+  width: 10rem;
+  user-select: none;
+}
+
+.loader {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(228, 221, 220, 0.856);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: Loader 0.01s both;
+  animation-delay: 1.75s;
+}
+.loader__anim {
+  display: block;
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  border: 0.4rem solid transparent;
+  border-top-color: #9356DC;
+  animation: spin 2s linear infinite;
+}
+.loader__anim:before {
+  content: "";
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+  right: 0.3rem;
+  bottom: 0.3rem;
+  border-radius: 50%;
+  border: 0.4rem solid transparent;
+  border-top-color: #99E2D0;
+  animation: spin 3s linear infinite;
+}
+.loader__anim:after {
+  content: "";
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  right: 0.9rem;
+  bottom: 0.9rem;
+  border-radius: 50%;
+  border: 0.4rem solid transparent;
+  border-top-color: #FF79DA;
+  animation: spin 1.5s linear infinite;
+}
+
+/*Pages*/
 /*************Located****************/
 .located {
   height: 3.5rem;
@@ -69,13 +222,13 @@ header .logo {
 }
 .located__text {
   font-size: 1.1em;
-  font-weight: 500;
+  font-weight: bold;
   padding-left: 1rem;
 }
 
 /**************Information************/
 .infobox {
-  padding: 2rem 1.5rem 3rem 1.5rem;
+  padding: 2rem 1.5rem 3.5rem 1.5rem;
   text-align: center;
   background: #f6f6f6;
   width: 100%;
@@ -83,7 +236,7 @@ header .logo {
 .infobox h2 {
   font-size: 1.5em;
   padding: 1rem 3rem;
-  font-weight: 700;
+  font-weight: bolder;
 }
 .infobox p {
   font-size: 1.1em;
@@ -104,7 +257,7 @@ header .logo {
 .manual__box {
   flex-direction: column;
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 3.3rem;
 }
 @media (min-width: 1500px) {
   .manual__box {
@@ -153,20 +306,20 @@ header .logo {
   color: #9356DC;
 }
 .manual__box .manual__item .manual__text, .manual__box .manual__item--active .manual__text {
-  font-weight: 500;
+  font-weight: bolder;
   font-size: 1em;
 }
 
 /******************************Section 3*********************************/
 .food {
-  margin-top: 3rem;
+  margin-top: 2rem;
   background: #f6f6f6;
-  padding-bottom: 5rem;
+  padding-bottom: 3.5rem;
 }
 .food__title {
   font-size: 1.5em;
   padding: 3.5rem 0 0.8rem 1.2rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .restaurants {
@@ -194,7 +347,7 @@ header .logo {
   background: white;
   border-radius: 1rem;
   position: relative;
-  box-shadow: 2px 5px 7px -2px #807e7e;
+  box-shadow: 2px 5px 0.9rem -2px #0000001f;
 }
 @media (min-width: 1500px) {
   .restaurants__item {
@@ -264,62 +417,8 @@ header .logo {
   opacity: 0;
 }
 
-/******************************Footer*********************************/
-Footer {
-  padding: 1rem 1.5rem;
-  background: #353535;
-  color: white;
-}
-@media (min-width: 1500px) {
-  Footer {
-    display: flex-inline;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
-  }
-}
-Footer .logo__footer {
-  padding-bottom: 1rem;
-}
-Footer .footer__list {
-  list-style: none;
-  line-height: 1.7;
-  font-size: 0.9em;
-}
-Footer .footer__list__icone {
-  margin-right: 0.5rem;
-}
-
-/**************************Button***************************************/
-.button {
-  height: 3rem;
-  width: 14rem;
-  border-radius: 2rem;
-  background: linear-gradient(170deg, #ff79da 0%, #9356dc 100%);
-  border: none;
-  color: white;
-  font-size: 1em;
-  font-weight: 500;
-  box-shadow: 2px 5px 7px -2px #807e7e;
-  cursor: pointer;
-}
-.button:hover {
-  background: linear-gradient(170deg, rgba(255, 121, 217, 0.55) 0%, rgba(147, 86, 220, 0.55) 100%);
-  box-shadow: 2px 5px 17px -2px #807e7e;
-}
-
-/*************************Page restaurant**************************************/
-/******************************************************************************/
 .pagemenu {
   background: #f6f6f6;
-}
-
-/**************************Header resto****************************************/
-.header__arrow {
-  position: absolute;
-  top: 1.4rem;
-  left: 1.5rem;
-  font-size: 1.5em;
 }
 
 /************************Picture Section1************************************/
@@ -497,7 +596,8 @@ Footer .footer__list__icone {
   overflow: hidden;
   white-space: nowrap;
 }
-.list__menu__box .menu__box__title, .list__menu__box h3 {
+.list__menu__box .menu__box__title,
+.list__menu__box h3 {
   font-size: 1.1em;
   padding-top: 0.4rem;
   padding-left: 0.5rem;
@@ -548,105 +648,6 @@ Footer .footer__list__icone {
 .list__menu__anim .menu__anim__circle:hover {
   transform: rotate(-360deg);
   transition-duration: 1s;
-  animation: rotate 1s both;
-}
-
-/*******************Button Menu****************/
-.button__menu {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 8rem;
-  padding-top: 1rem;
-}
-.button__menu .button {
-  width: 10rem;
-  user-select: none;
-}
-
-/*****************Loader******************/
-.loader {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(228, 221, 220, 0.856);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: Loader 0.01s both;
-  animation-delay: 1.75s;
-}
-.loader__anim {
-  display: block;
-  position: relative;
-  width: 15rem;
-  height: 15rem;
-  border-radius: 50%;
-  border: 0.4rem solid transparent;
-  border-top-color: #9356DC;
-  animation: spin 2s linear infinite;
-}
-.loader__anim:before {
-  content: "";
-  position: absolute;
-  top: 0.3rem;
-  left: 0.3rem;
-  right: 0.3rem;
-  bottom: 0.3rem;
-  border-radius: 50%;
-  border: 0.4rem solid transparent;
-  border-top-color: #99E2D0;
-  animation: spin 3s linear infinite;
-}
-.loader__anim:after {
-  content: "";
-  position: absolute;
-  top: 0.9rem;
-  left: 0.9rem;
-  right: 0.9rem;
-  bottom: 0.9rem;
-  border-radius: 50%;
-  border: 0.4rem solid transparent;
-  border-top-color: #FF79DA;
-  animation: spin 1.5s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes Loader {
-  100% {
-    opacity: 0;
-    z-index: -99;
-  }
-}
-/***********animation coeur******************/
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/**********animation menu***************/
-@keyframes translateY {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

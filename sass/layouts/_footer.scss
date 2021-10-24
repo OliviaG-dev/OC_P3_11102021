@@ -1,0 +1,26 @@
+Footer {
+    padding: 1.5rem 1.5rem;
+    background: #353535;
+    color: white;
+
+    @media (min-width:1500px){  
+                display: flex-inline;
+                flex-direction: row; 
+                text-align: center;
+                justify-content: center;
+            }
+
+    .logo__footer{
+        padding-bottom: 1rem;
+    }
+
+    .footer__list{
+        list-style: none;
+        line-height: 1.7;
+        font-size: 0.9em;
+
+            &__icone{
+                margin-right: 0.5rem;
+            }
+    }
+}
