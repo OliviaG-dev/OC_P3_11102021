@@ -429,6 +429,7 @@ Footer {
         }
 }
 
+
 .list__menu{
     background: #ffffff;
     margin-top: 1rem;
@@ -438,9 +439,11 @@ Footer {
     display: flex;
     max-height: 6rem;
     animation-name: opacity, translateY;
-    animation-duration: 0.5s, 0.5s;
+    animation-duration: 2s, 0.9s;
     animation-timing-function: ease-in-out, ease-in-out;
-    animation-direction: forward, forward;
+    animation-direction: normal, normal;
+    @include delay;
+
         &:hover .list__menu__anim{
             width: 100px;
         }
@@ -450,11 +453,12 @@ Footer {
         }
 }
 
+
+
 .list__menu__box{
     flex-grow: 2;
     overflow: hidden;
     white-space: nowrap;
-    
 
             .menu__box__title, h3{
                 font-size: 1.1em;
@@ -602,5 +606,15 @@ Footer {
     }
     100% {
         opacity:1;
+    }
+}
+
+/**********animation menu***************/
+@keyframes translateY {
+    0% {
+        transform: translateY(0)
+    }
+    100% {
+        transform: translateY(-10px)
     }
 }
