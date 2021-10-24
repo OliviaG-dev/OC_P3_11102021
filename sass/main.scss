@@ -80,7 +80,6 @@ header {
 
         @media (min-width:1500px){
             margin-right: 2rem;
-            font-size: 1.5em;
             flex-direction: row;
         }
 
@@ -95,6 +94,12 @@ header {
             border-radius: 1rem;
             margin-left: 1.5rem; 
             box-shadow: 2px 5px 7px -2px #807e7e;
+            
+            @media (min-width:1500px){
+                margin-right: 2rem;
+                flex-direction: row;
+                max-width: 20%;
+            }
 
             &--active {
                 @extend .manual__item;
@@ -432,6 +437,7 @@ Footer {
 
 .list__menu{
     background: #ffffff;
+    opacity: 0;
     margin-top: 1rem;
     border-radius: 1rem;
     width: 95%;
@@ -442,7 +448,8 @@ Footer {
     animation-duration: 2s, 0.9s;
     animation-timing-function: ease-in-out, ease-in-out;
     animation-direction: normal, normal;
-    @include delay;
+    animation-fill-mode:forwards, backwards;
+    @include delay (.3, .3);
 
         &:hover .list__menu__anim{
             width: 100px;
@@ -462,9 +469,9 @@ Footer {
 
             .menu__box__title, h3{
                 font-size: 1.1em;
-                padding-top: 0.5rem;
+                padding-top: 0.4rem;
                 padding-left: 0.5rem;
-                padding-bottom: 0.2rem;
+                padding-bottom: 0.1rem;
                 font-weight: 500;
                 margin: 0;
                 white-space: nowrap;
@@ -474,7 +481,7 @@ Footer {
             .menu__box__subtitle{
                 display: flex;
                 justify-content: space-between;
-                padding-bottom: 0.5rem;
+                padding-bottom: 0.7rem;
                 padding-left: 0.9rem;
             
                     .box__subtitle__text{
@@ -484,8 +491,10 @@ Footer {
                         overflow: hidden;
                     }
                     .box__subtitle__price{
-                        font-weight: bold;
-                        padding-right: 0.3rem;
+                        font-size: 0.9em;
+                        font-weight: 600;
+                        padding-right: 1.5rem;
+                        margin-left: 0.2rem;
                     }
             }
         }
@@ -526,6 +535,7 @@ Footer {
     padding-top: 1rem;
         .button{
             width: 10rem;
+            user-select: none;
         }
 }
 

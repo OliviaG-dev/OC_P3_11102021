@@ -1,8 +1,17 @@
-@mixin delay {
-    @for $i from 0 through 9{
-        &:nth-child(#{$i}){
-            animation-delay: #{$i* .2}s, #{$i* .1}s;
+// @mixin delay {
+//     @for $i from 0 through 9{
+//         &:nth-child(#{$i}){
+//             animation-delay: #{$i* .2}s, #{$i* .1}s;
+//         }
+//     }
+// }
+
+
+
+@mixin delay ($seconde1, $seconde2) {
+    @for $i from 10 to 1{
+        &--#{$i}{
+            animation-delay: #{$i* $seconde1}s, #{$i* $seconde2}s;
         }
     }
 }
-

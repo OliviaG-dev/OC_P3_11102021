@@ -109,7 +109,6 @@ header .logo {
 @media (min-width: 1500px) {
   .manual__box {
     margin-right: 2rem;
-    font-size: 1.5em;
     flex-direction: row;
   }
 }
@@ -124,6 +123,13 @@ header .logo {
   border-radius: 1rem;
   margin-left: 1.5rem;
   box-shadow: 2px 5px 7px -2px #807e7e;
+}
+@media (min-width: 1500px) {
+  .manual__box .manual__item, .manual__box .manual__item--active {
+    margin-right: 2rem;
+    flex-direction: row;
+    max-width: 20%;
+  }
 }
 .manual__box .manual__item--active {
   background: #f1e4f1;
@@ -436,6 +442,7 @@ Footer .footer__list__icone {
 
 .list__menu {
   background: #ffffff;
+  opacity: 0;
   margin-top: 1rem;
   border-radius: 1rem;
   width: 95%;
@@ -446,36 +453,34 @@ Footer .footer__list__icone {
   animation-duration: 2s, 0.9s;
   animation-timing-function: ease-in-out, ease-in-out;
   animation-direction: normal, normal;
+  animation-fill-mode: forwards, backwards;
 }
-.list__menu:nth-child(0) {
-  animation-delay: 0s, 0s;
+.list__menu--10 {
+  animation-delay: 3s, 3s;
 }
-.list__menu:nth-child(1) {
-  animation-delay: 0.2s, 0.1s;
+.list__menu--9 {
+  animation-delay: 2.7s, 2.7s;
 }
-.list__menu:nth-child(2) {
-  animation-delay: 0.4s, 0.2s;
+.list__menu--8 {
+  animation-delay: 2.4s, 2.4s;
 }
-.list__menu:nth-child(3) {
-  animation-delay: 0.6s, 0.3s;
+.list__menu--7 {
+  animation-delay: 2.1s, 2.1s;
 }
-.list__menu:nth-child(4) {
-  animation-delay: 0.8s, 0.4s;
+.list__menu--6 {
+  animation-delay: 1.8s, 1.8s;
 }
-.list__menu:nth-child(5) {
-  animation-delay: 1s, 0.5s;
+.list__menu--5 {
+  animation-delay: 1.5s, 1.5s;
 }
-.list__menu:nth-child(6) {
-  animation-delay: 1.2s, 0.6s;
+.list__menu--4 {
+  animation-delay: 1.2s, 1.2s;
 }
-.list__menu:nth-child(7) {
-  animation-delay: 1.4s, 0.7s;
+.list__menu--3 {
+  animation-delay: 0.9s, 0.9s;
 }
-.list__menu:nth-child(8) {
-  animation-delay: 1.6s, 0.8s;
-}
-.list__menu:nth-child(9) {
-  animation-delay: 1.8s, 0.9s;
+.list__menu--2 {
+  animation-delay: 0.6s, 0.6s;
 }
 .list__menu:hover .list__menu__anim {
   width: 100px;
@@ -494,9 +499,9 @@ Footer .footer__list__icone {
 }
 .list__menu__box .menu__box__title, .list__menu__box h3 {
   font-size: 1.1em;
-  padding-top: 0.5rem;
+  padding-top: 0.4rem;
   padding-left: 0.5rem;
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.1rem;
   font-weight: 500;
   margin: 0;
   white-space: nowrap;
@@ -506,7 +511,7 @@ Footer .footer__list__icone {
 .list__menu__box .menu__box__subtitle {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.7rem;
   padding-left: 0.9rem;
 }
 .list__menu__box .menu__box__subtitle .box__subtitle__text {
@@ -516,8 +521,10 @@ Footer .footer__list__icone {
   overflow: hidden;
 }
 .list__menu__box .menu__box__subtitle .box__subtitle__price {
-  font-weight: bold;
-  padding-right: 0.3rem;
+  font-size: 0.9em;
+  font-weight: 600;
+  padding-right: 1.5rem;
+  margin-left: 0.2rem;
 }
 
 .list__menu__anim {
@@ -554,6 +561,7 @@ Footer .footer__list__icone {
 }
 .button__menu .button {
   width: 10rem;
+  user-select: none;
 }
 
 /*****************Loader******************/
