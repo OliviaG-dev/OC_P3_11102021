@@ -113,7 +113,7 @@ Footer {
 }
 @media (min-width: 1500px) {
   Footer {
-    display: flex-inline;
+    display: flex;
     flex-direction: row;
     text-align: center;
     justify-content: center;
@@ -583,6 +583,10 @@ Footer .footer__list__icone {
 }
 .list__menu:hover .list__menu__anim {
   width: 100px;
+}
+.list__menu:hover .list__menu__anim .menu__anim__circle {
+  transform: rotate(-360deg);
+  transition-duration: 1s;
 }
 @media (min-width: 1500px) {
   .list__menu {

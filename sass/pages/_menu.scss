@@ -151,6 +151,10 @@
 
     &:hover .list__menu__anim {
         width: 100px;
+        & .menu__anim__circle {
+            transform: rotate(-360deg);
+            transition-duration: 1s;
+        }
     }
 
     @media (min-width:1500px) {
