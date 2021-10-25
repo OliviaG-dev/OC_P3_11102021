@@ -114,9 +114,8 @@ Footer {
 @media (min-width: 1500px) {
   Footer {
     display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
 Footer .logo__footer {

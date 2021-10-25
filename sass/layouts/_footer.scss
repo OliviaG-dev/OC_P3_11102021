@@ -4,10 +4,9 @@ Footer {
     color: white;
 
     @media (min-width:1500px){  
-                display: flex;
-                flex-direction: row; 
-                text-align: center;
-                justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             }
 
     .logo__footer{
