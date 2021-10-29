@@ -232,7 +232,7 @@ Footer .footer__list__icone {
   background: #f6f6f6;
   width: 100%;
 }
-.infobox h2 {
+.infobox h1 {
   font-size: 1.5em;
   padding: 1rem 3rem;
   font-weight: bolder;
@@ -584,7 +584,7 @@ Footer .footer__list__icone {
   width: 100px;
 }
 .list__menu:hover .list__menu__anim .menu__anim__circle {
-  transform: rotate(-360deg);
+  transform: rotate(360deg);
   transition-duration: 1s;
 }
 @media (min-width: 1500px) {
